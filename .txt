@@ -1,0 +1,129 @@
+  <div class="container-items">
+            <div class="item">
+                <span class="title-item" >sudadera mujer bota ancha</span>
+                <img src="assets/images/pantaloM 1.jpg" alt="Blusas ombliguera" class="img-item">
+                <span class="pice-item">$15.000</span>
+
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Saco con capota-verde</span>
+                <img src="assets/images/saco 1.png" alt="saco Verde" class="img-item">
+                <span class="pice-item">$55.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">hudie-cafe </span>
+                <img src="assets/images/saco 2.jpg" alt="" class="img-item">
+                <span class="pice-item">$65.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">saco al cuello-cafe</span>
+                <img src="assets/images/saco 3.jpg" alt="" class="img-item">
+                <span class="pice-item">$18.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">saco-Nasa</span>
+                <img src="assets/images/saco 4.jpg" alt="Saco-Nasa" class="img-item">
+                <span class="pice-item">$50.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+
+
+            <div class="item">
+                <span class="title-item">Saco Los Angeles</span>
+                <img src="assets/images/saco 5.jpg" alt="Los Angeles" class="img-item">
+                <span class="pice-item">$45.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Saco azul-Rey</span>
+                <img src="assets/images/saco 6.jpg" alt="" class="img-item">
+                <span class="pice-item">$45.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">saco blanco dama</span>
+                <img src="assets/images/sacoM 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$45.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">saco color-crema </span>
+                <img src="assets/images/sacoM 2.jpg" alt="" class="img-item">
+                <span class="pice-item">$42.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">saco azul-Cielo </span>
+                <img src="assets/images/sacoM 3.jpg" alt="" class="img-item">
+                <span class="pice-item">$42.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+
+
+            <div class="item">
+                <span class="title-item">sudadera algodon-negra </span>
+                <img src="assets/images/sudadera 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$25.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">sudadera deportivas </span>
+                <img src="assets/images/sudadera 2.jpg" alt="" class="img-item">
+                <span class="pice-item">$42.800</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">sudaderas  </span>
+                <img src="assets/images/sudadera 3.jpg" alt="" class="img-item">
+                <span class="pice-item">$42.800</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">camisa oversize azul </span>
+                <img src="assets/images/camisa 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$30.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">camisa polo-negra </span>
+                <img src="assets/images/camisa 2.jpg" alt="" class="img-item">
+                <span class="pice-item">$30.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+
+
+            <div class="item">
+                <span class="title-item">camisa beisbolera</span>
+                <img src="assets/images/camisa 3.jpg" alt="" class="img-item">
+                <span class="pice-item">$35.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">sudadera blanca</span>
+                <img src="assets/images/pantalon 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$20.800</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">hudies negro   </span>
+                <img src="assets/images/conjunto 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$85.800</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">conjunto blanco pantaloneta</span>
+                <img src="assets/images/conjunto 2.jpg" alt="" class="img-item">
+                <span class="pice-item">$75.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="title-item">panataloneta algodon-verde </span>
+                <img src="assets/images/pantaloneta 1.jpg" alt="" class="img-item">
+                <span class="pice-item">$30.000</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+    
