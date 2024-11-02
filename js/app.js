@@ -21,7 +21,7 @@ function renderProducts() {
             <span class="price-product">$${product.price.toLocaleString()}</span>
             <p class="description-product">${product.description}</p>
             <span class="quantity-product">Cantidad disponible: <span id="quantity-${product.id}">${product.quantity}</span></span>
-            <button class="button-product" data-id="${product.id}" ${product.quantity === 0 ? 'disabled' : ''}>agregar al carrito</button>
+            <button class="button-product" data-id="${product.id}" ${product.quantity === 0 ? 'disabled' : ''}>Agregar al carrito</button>
             <span class="out-of-stock ${product.quantity > 0 ? 'd-none' : ''} text-danger">Agotado</span>
         `;
 
@@ -33,11 +33,6 @@ function renderProducts() {
         containerItems.appendChild(productDiv);
     });
 }
-
-document.getElementById('empty-cart').addEventListener('click', () => {
-    cartItems = [];
-    updateCartDisplay();
-});
 
 function toggleCart() {
     cartContainer.style.display = (cartContainer.style.display === "none" || cartContainer.style.display === "") ? "block" : "none";
@@ -61,12 +56,24 @@ function addToCart(product) {
         alert(`No hay suficiente stock de ${product.name}.`);
     }
 
-    // Actualizar visualización del carrito y volver a renderizar productos
     updateCartDisplay();
-    renderProducts(); // Actualizar la lista de productos
+    renderProducts();
 }
 
-
+function removeFromCart(productId) {
+    const itemIndex = cart.findIndex(item => item.id === productId);
+    if (itemIndex > -1) {
+        const item = cart[itemIndex];
+        cart.splice(itemIndex, 1); 
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            product.quantity += item.quantity; 
+        }
+        updateCartDisplay();
+        renderProducts();
+    }
+}
+ 
 function updateCartDisplay() {
     cartItemsContainer.innerHTML = '';
     if (cart.length === 0) {
@@ -81,7 +88,7 @@ function updateCartDisplay() {
             itemElement.innerHTML = `
                 <span>${item.name} (x${item.quantity})</span>
                 <span>$${(item.price * item.quantity).toFixed(2)}</span>
-                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})" >Eliminar</button>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Eliminar</button>
             `;
             cartItemsContainer.appendChild(itemElement);
         });
@@ -90,17 +97,31 @@ function updateCartDisplay() {
     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-document.getElementById('purchaseButton').addEventListener('click', () => {
+document.getElementById('empty-cart').addEventListener('click', () => {
     
-    const purchaseModal = new bootstrap.Modal(document.getElementById('purchaseModal'));
-    purchaseModal.show();
+    cart.forEach(item => {
+        const product = products.find(p => p.id === item.id);
+        if (product) {
+            product.quantity += item.quantity; 
+        }
+    });
 
+    // Vaciar el carrito
+    cart = [];
+    updateCartDisplay();
+    renderProducts();
+});
+
+document.getElementById('purchaseButton').addEventListener('click', () => {
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     
+    alert(`Compra exitosa. Total: $${total.toFixed(2)}`);
+
+  
     cart = [];
     updateCartDisplay(); 
     renderProducts(); 
 });
-
 
 document.getElementById('cartDropdown').addEventListener('click', toggleCart);
 renderProducts();
