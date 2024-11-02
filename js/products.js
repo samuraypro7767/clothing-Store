@@ -1,15 +1,15 @@
 export const products = [
     {
         id: '1',
-        name: 'Sudadera Mujer Bota Ancha',
+        name: 'Sudadera Ancha',
         description: 'sudadera de mujer con estilo moderno y bota ancha.',
-        price: 15000,
+        price: 35000,
         quantity: 6,
         src: './assets/images/pantaloM 1.jpg'
     },
     {
         id: '2',
-        name: 'Saco con Capota Verde',
+        name: 'Saco  Verde',
         description: 'Saco verde con capota, ideal para un look casual.',
         price: 55000,
         quantity: 6,
@@ -17,7 +17,7 @@ export const products = [
     },
     {
         id: '3',
-        name: 'Hudie Café',
+        name: 'Hudie oversize Café',
         description: 'Hudie de color café para un estilo urbano y cómodo.',
         price: 65000,
         quantity: 1,
@@ -26,8 +26,8 @@ export const products = [
     {
         id: '4',
         name: 'Saco al Cuello Café',
-        description: 'Saco de cuello alto en color café para mantener el estilo en invierno.',
-        price: 18000,
+        description: 'Saco de cuello alto para mantener el estilo en invierno.',
+        price: 38000,
         quantity: 6,
         src: './assets/images/saco 3.jpg'
     },
@@ -50,7 +50,7 @@ export const products = [
     {
         id: '7',
         name: 'Saco Azul Rey',
-        description: 'Elegante saco en color azul rey.',
+        description: 'Elegante saco en color azul rey hecho en algodon.',
         price: 45000,
         quantity: 7,
         src: './assets/images/saco 6.jpg'
@@ -81,7 +81,7 @@ export const products = [
     },
     {
         id: '11',
-        name: 'Sudadera Algodón Negra',
+        name: 'Sudadera  Negra',
         description: 'Sudadera de algodón negra para máxima comodidad.',
         price: 25000,
         quantity: 3,
@@ -130,7 +130,7 @@ export const products = [
     {
         id: '17',
         name: 'Sudadera Blanca',
-        description: 'Sudadera blanca de estilo básico.',
+        description: 'Sudadera blanca de estilo básico algodon.',
         price: 20800,
         quantity: 3,
         src: './assets/images/pantalon 1.jpg'
@@ -138,14 +138,14 @@ export const products = [
     {
         id: '18',
         name: 'Hudies Negro',
-        description: 'Hudies negro cómodo y de estilo moderno.',
+        description: 'Hudies negro cómodo y de estilo moderno en algoodon.',
         price: 85800,
         quantity: 10,
         src: './assets/images/conjunto 1.jpg'
     },
     {
         id: '19',
-        name: 'Conjunto Blanco Pantaloneta',
+        name: 'Conjunto Blanco ',
         description: 'Conjunto blanco con pantaloneta, ideal para el verano.',
         price: 75000,
         quantity: 5,
@@ -153,7 +153,7 @@ export const products = [
     },
     {
         id: '20',
-        name: 'Pantaloneta Algodón Verde',
+        name: 'Pantaloneta Verde',
         description: 'Pantaloneta verde de algodón, ligera y fresca.',
         price: 30000,
         quantity: 4,

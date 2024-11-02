@@ -1,59 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing-Store</title>
+
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Clothing-Store</title>
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <nav class="navbar">
-            <div class="Logo">
-                <h1 class="nav-link"><img src="assets/images/logo.png" alt="Logo"> Clothing-Store</h1>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" href="#"><img src="assets/images/logo.png" alt="logo" class="logo">
+                    Clothing-Store</a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <a class="nav-link" href="#home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shop">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Nosotros</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <a class="nav-link cart-icon" href="#" role="button" id="cartDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge bg-success" id="cart-count">0</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end  p-3" aria-labelledby="cartDropdown"
+                            id="cartContainer" style="display: none;">
+                            <h5>Carrito de Compras</h5>
+                            <hr class="dropdown-divider">
+                            <div id="cartItemsContainer">
+                                <p id="emptyCartMessage">Tu carrito está vacío.</p>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <strong id="cartTotal">Total: $0</strong>
+                            <div class="text-center mt-2">
+                                <button id="empty-cart" class="btn btn-success w-100 btn-danger">Vaciar Carrito</button>
+                                <button class="btn btn-success w-100" id="purchaseButton">Realizar Compra</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </nav>
-        <section class="hero-section">
-            <h2>¡Bienvenido a Clothing-Store!</h2>
-            <h3>Tu destino ideal para descubrir tu estilo</h3>
-        </section>
     </header>
 
-    <section class="container">
-        <div class="containerItems" id="containerItems">
-            <!-- Aquí se mostrarán los productos -->
+    <section class="container mt-5">
+        <div class="containerItems row" id="containerItems">
+            <!-- Los productos se mostrarán aquí -->
         </div>
     </section>
-    
-    <footer class="footer">
+
+    <footer class="footer mt-5  bg-dark">
         <div class="footer-container">
             <div class="footer-logo">
                 <h2>Clothing-Store</h2>
                 <p>Tu tienda de moda para cada ocasión.</p>
             </div>
-            
-            <div class="footer-links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#shop">Tienda</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-            
+
             <div class="footer-contact">
                 <h3>Contacto</h3>
                 <p>Email: contacto@clothingstore.com</p>
                 <p>Teléfono: +34 123 456 789</p>
             </div>
-            
+
             <div class="footer-social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
@@ -64,12 +90,18 @@
                 </div>
             </div>
         </div>
-        
-        <div class="footer-bottom">
+
+        <div class="footer-bottom text-center">
             <p>&copy; 2024 Clothing-Store. Todos los derechos reservados.</p>
         </div>
     </footer>
-  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+3oHfA4e1AnmF5H61VoK6j4vIO9HN"
+        crossorigin="anonymous"></script>
     <script type="module" src="js/app.js"></script>
+
 </body>
+
 </html>
