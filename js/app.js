@@ -64,16 +64,16 @@ function removeFromCart(productId) {
     const itemIndex = cart.findIndex(item => item.id === productId);
     if (itemIndex > -1) {
         const item = cart[itemIndex];
-        cart.splice(itemIndex, 1); 
+        cart.splice(itemIndex, 1); // Eliminar del carrito
         const product = products.find(p => p.id === productId);
         if (product) {
-            product.quantity += item.quantity; 
+            product.quantity += item.quantity; // Restablecer la cantidad en stock
         }
         updateCartDisplay();
         renderProducts();
     }
 }
- 
+
 function updateCartDisplay() {
     cartItemsContainer.innerHTML = '';
     if (cart.length === 0) {
@@ -88,8 +88,11 @@ function updateCartDisplay() {
             itemElement.innerHTML = `
                 <span>${item.name} (x${item.quantity})</span>
                 <span>$${(item.price * item.quantity).toFixed(2)}</span>
-                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Eliminar</button>
+                <button class="btn btn-danger btn-sm" data-id="${item.id}">Eliminar</button>
             `;
+            itemElement.querySelector('button').addEventListener('click', () => {
+                removeFromCart(item.id);
+            });
             cartItemsContainer.appendChild(itemElement);
         });
     }
@@ -98,15 +101,13 @@ function updateCartDisplay() {
 }
 
 document.getElementById('empty-cart').addEventListener('click', () => {
-    
     cart.forEach(item => {
         const product = products.find(p => p.id === item.id);
         if (product) {
-            product.quantity += item.quantity; 
+            product.quantity += item.quantity; // Aumentar la cantidad disponible
         }
     });
 
-    // Vaciar el carrito
     cart = [];
     updateCartDisplay();
     renderProducts();
@@ -114,10 +115,7 @@ document.getElementById('empty-cart').addEventListener('click', () => {
 
 document.getElementById('purchaseButton').addEventListener('click', () => {
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    
     alert(`Compra exitosa. Total: $${total.toFixed(2)}`);
-
-  
     cart = [];
     updateCartDisplay(); 
     renderProducts(); 
